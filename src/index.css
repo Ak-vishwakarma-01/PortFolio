@@ -1,0 +1,329 @@
+:root{
+  --box-shadow: 5px 5px 10px 10px pink; 
+  --bg-color: rgb(40,47,97);
+}
+html body{
+  background-color:rgb(6, 32, 76) ;
+  padding: 0;
+  margin: 0;
+  color: white;
+} 
+
+/* Nav bar Section */
+
+.nav_bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_bar .nav_items{
+  color:white;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.nav_bar i{
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.nav_bar .nav_items:hover{
+  border-bottom: 3px solid rgb(241, 28, 213);
+}
+
+.nav_bar button{
+  background: transparent;
+  border: none;
+}
+
+/*home Sections*/
+.home{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home .left{
+  background-color: var(--bg-color);
+  width: 40vw;
+  height: 25vh;
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+
+.home .left:hover{
+  background-color: rgb(58, 4, 108);
+  animation: imageanimation 2s;
+} 
+
+
+.home .right .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color:rgb(241, 28, 213) ; */
+  padding: 2px;
+  margin-right: 5vw;
+}
+.home .right .img img{
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  border: 5px solid pink;
+  animation-name: imageanimation;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes imageanimation {
+  0%{
+    border-color:rgb(64, 107, 246);
+    box-shadow: 10px 10px 100px 30px rgb(64, 107, 246);
+  }
+  50%{
+    border-color: rgb(245, 255, 47);
+    transform: translate(0,10px);
+    box-shadow: 10px 10px 100px 10px rgb(245, 255, 47);
+  }
+  75%{
+    border-color:rgb(245, 91, 222);
+    box-shadow: 10px 10px 100px 30px rgb(236, 78, 188);
+
+  }100%{
+    border-color: rgb(44, 217, 252);
+    box-shadow: 10px 10px 100px 30px rgb(51, 225, 252);
+  }  
+}
+
+/*skills */
+.skills{
+  width: 800px;
+  text-align: center;
+}
+.skills h1{
+  margin-right:16vw;
+}
+
+.skills .items{
+  display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+}
+.skills .items .item{
+  width: calc(33.33%);
+  background-color: black;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid rgb(245, 91, 222);
+  box-shadow: 5px 5px 5px 0px rgb(236, 126, 241);
+  border-radius: 20px;
+}
+.skills .items .item img{
+  width: 70px;
+  height: 70px;
+}
+
+.skills .items .item:hover {
+  animation: bounce 0.5s;
+  background-color: rgb(57, 9, 171);
+  
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* projects */
+.projects .row div:hover{
+  transform: scale(1.05);
+  background-color: rgb(56, 12, 166);
+}
+
+/*contacts*/
+.contacts{
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts .items{
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contacts .items a{
+  font-size: 2rem;
+  height: 60px;
+  width: 60px ;
+  margin: 20px;
+  padding-top: 5px;
+  color:solid pink;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid pink;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.contacts .items a:hover{
+  animation-name: contanimation;
+  animation-duration: 2s;
+  box-shadow: 1px 1px 100px 3px rgb(230, 137, 239);
+}
+
+@keyframes contanimation {
+  0%{
+    border-color:rgb(64, 107, 246);
+    box-shadow: 1px 1px 100px 3px rgb(64, 107, 246);
+  }
+  50%{
+    border-color: rgb(245, 255, 47);
+    transform: translate(0,10px);
+    box-shadow: 1px 1px 100px 3px rgb(245, 255, 47);
+  }
+  75%{
+    border-color:rgb(245, 91, 222);
+    box-shadow: 1px 1px 100px 3px rgb(236, 78, 188);
+
+  }100%{
+    border-color: rgb(44, 217, 252);
+    box-shadow: 1px 1px 100px 3px rgb(51, 225, 252);
+  }  
+}
+
+@media (max-width:600px) {
+  /* Nav Ba Sections */
+  .nav_bar .nav_items{
+    padding: 5px;
+    font-weight: bold;
+    font-size: .9rem;
+    display: none;
+  }
+  .nav_bar i{
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display:block;
+  }
+  .nav_bar i:hover{
+    color: aqua;
+  }
+/*home Sections*/
+  .home{
+    height: 55vh;
+    flex-direction:column-reverse;
+  }
+  .home h1{
+    font-size: 1.5rem;
+  }
+  .home .left{
+    width: 80%;
+    margin-bottom: 2vh;
+    box-shadow: 3px 3px 10px 2px pink; 
+  }
+
+  .home .right .img{
+    margin: 0;
+  }
+  .home .right .img img{
+    height: 150px;
+    width: 150px;
+    animation-name: mobileimagination;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes mobileimagination {
+    0%{
+      border-color:rgb(64, 107, 246);
+      box-shadow: 3px 3px 40px 5px rgb(64, 107, 246);
+    }
+    50%{
+      border-color: rgb(245, 255, 47);
+      transform: translate(0,10px);
+      box-shadow: 3px 3px 40px 5px rgb(245, 255, 47);
+    }
+    75%{
+      border-color:rgb(245, 91, 222);
+      box-shadow: 3px 3px 40px 5px rgb(236, 78, 188);
+  
+    }100%{
+      border-color: rgb(44, 217, 252);
+      box-shadow: 3px 3px 40px 5px rgb(51, 225, 252);
+    }  
+  }
+
+  /*skills */
+.skills{
+  width: 300px;
+}
+
+.skills .items{
+  width: 230px;
+}
+.skills .items .item{
+  width: calc(33.33%);
+  background-color: black;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid rgb(245, 91, 222);
+  box-shadow: 3px 3px 3px 0px rgb(236, 126, 241);
+  border-radius: 10px;
+}
+.skills .items .item h3{
+  font-size: 0.9rem;
+}
+.skills .items .item img{
+  width: 50px;
+  height: 50px;
+}
+/*projects */
+.projects{
+  width: 250px;
+}
+
+/*contacts*/
+.contacts{
+  width: 80vw;
+}
+.contacts .items{
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: inherit;
+}
+.contacts .items a{
+  font-size: 2rem;
+  height: 60px;
+  width: 60px ;
+  margin: 10px;
+  padding-top: 5px;
+  color:solid pink;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid pink;
+  border-radius: 100%;
+}
+
+
+}
