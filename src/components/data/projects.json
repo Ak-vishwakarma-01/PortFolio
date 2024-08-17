@@ -4,7 +4,7 @@
     "title": "Ai Chatting WebSite",
     "imageSrc": "Projects/Aichating.png",
     "description": "Ai chatting Application with Reactjs and Gemini Api",
-    "source": "https://github.com/Ak-vishwakarma-01/Ai-chatting-using-gemini-api"
+    "source": "https://ai-chatting-using-gemini-api.vercel.app/"
   },
   {
     "key": 2,
