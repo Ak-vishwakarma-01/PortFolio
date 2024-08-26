@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
     <Navebar/>
-    <div className="contaner">
+    <div className="container">
       <Home/>
       {/* <Experience/> */}
       <Skills/>
