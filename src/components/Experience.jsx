@@ -2,7 +2,7 @@ import React from 'react'
 import experience from './data/experience.json'
 const Experience = () => {
   return (
-    <div className="contiainer ex">
+    <div className="contiainer ex" id='experience'>
       {
         experience.map((data)=>{
           return(

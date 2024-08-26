@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navebar = () => {
+  const [mobile,setMobile] = useState("false");
+  function changclass(){
+    setMobile(mobile==="true"?"false":"true")
+    console.log(mobile);
+  }
   return (
     <>
-      <div className="container nav_bar">
-        <div className="left" style={{fontWeight:"bold", fontSize:"1.6rem"}}>Portfolio</div>
-        <div className="right">
-          <a href="" className="nav_items">Home</a>
-          <a href="" className="nav_items">Experience</a>
-          <a href="" className="nav_items">Skills</a>
-          <a href="" className="nav_items">Project</a>
-          <a href="" className="nav_items">Contact</a>
-          <button><i class="ri-menu-3-fill"></i></button>
+      <div className={`container nav_bar ${mobile}`}>
+        <div className={`left le${mobile}`} style={{fontWeight:"bold", fontSize:"1.6rem"}}>Portfolio</div>
+        <div className={`right ${mobile}`}>
+          <a onClick={changclass} href="#home" className="nav_items">Home</a>
+          <a onClick={changclass} href="#experience" className="nav_items">Experience</a>
+          <a onClick={changclass} href="#skills" className="nav_items">Skills</a>
+          <a onClick={changclass} href="#projects" className="nav_items">Project</a>
+          <a onClick={changclass} href="#contact" className="nav_items">Contact</a>
+          <button onClick={changclass}><i class="ri-menu-3-fill"></i></button>
         </div>
       </div>
     </>
