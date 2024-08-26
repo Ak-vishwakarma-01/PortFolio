@@ -340,8 +340,6 @@ html body{
   border-radius: 100%;
 }
 
-}
-
 .true{
   .nav_items{
     display:block;
@@ -359,3 +357,6 @@ html body{
   display: flex;
   justify-content: space-between;
 }
+
+}
+
