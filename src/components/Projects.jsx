@@ -29,7 +29,7 @@ const Projects = () => {
                   <div className="card-body" style={{textAlign:"center"}}>
                     <h5 className="card-title">{data.title}</h5>
                     <p className="card-text">{data.description}</p>
-                    <a href={data.source} className="btn btn-primary ">
+                    <a href={data.source} className="btn btn-primary" target="_blank">
                       Link
                     </a>
                   </div>
