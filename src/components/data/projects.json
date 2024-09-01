@@ -1,17 +1,17 @@
 [
   {
     "key": 1,
-    "title": "Ai Chatting WebSite",
-    "imageSrc": "Projects/Aichating.png",
-    "description": "Ai chatting Application with Reactjs and Gemini Api",
-    "source": "https://ai-chatting-using-gemini-api.vercel.app/"
-  },
-  {
-    "key": 2,
     "title": "Restaurent website",
     "imageSrc": "Projects/restauren.png",
     "description": "This Project is made with reactjs",
     "source": "https://restaurent-web-site.vercel.app/"
+  },
+  {
+    "key": 2,
+    "title": "Ai Chatting WebSite",
+    "imageSrc": "Projects/Aichating.png",
+    "description": "Ai chatting Application with Reactjs and Gemini Api",
+    "source": "https://ai-chatting-using-gemini-api.vercel.app/"
   },
   {
     "key": 3,
