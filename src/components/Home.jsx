@@ -1,9 +1,12 @@
 import React from 'react'
 import Resume1 from '../pdf/Resume1.pdf'
 import hero from './data/hero.json' 
+import img from './3dComponents/Img3D'
+import Img3D from './3dComponents/Img3D'
 const Home = () => {
   return (
     <>
+    {/* <Img3D/>   */}
     <div className="container home" id="home">
       <div className="left">
           <h1>Ankit Kumar <br/> Vishwakarma</h1>

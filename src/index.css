@@ -1,9 +1,9 @@
 :root{
   --box-shadow: 5px 5px 10px 10px pink; 
-  --bg-color: rgb(40,47,97);
+  --bg-color: rgb(73, 85, 179);
 }
 html body{
-  background-color:rgb(6, 32, 76) ;
+  background-color:rgb(8, 47, 115) ;
   padding: 0;
   margin: 0;
   color: white;
@@ -123,7 +123,7 @@ html body{
 }
 
 .skills .items{
-  display: flex; */
+  display: flex; 
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -161,13 +161,43 @@ html body{
     transform: translateY(-5px);
   }
 }
-/* projects */
-.projects{
-  z-index: 1; /* Lower than navbar */
+/* projects  3d animation*/
+.parent{
+  perspective: 1000px;
+  .img{
+    transform-style: preserve-3d; 
+  }
+  .card-img-top{
+    box-shadow: 0px 2px 60px rgba(8, 57, 126, 0.5), 0px 4px 80px rgba(21, 93, 193, 0.5);
+     opacity: .8;   
+     /* box-shadow: <horizontal-offset> <vertical-offset> <blur-radius> <color>*/
+     transform: translate3d(0px,0px,50px);
+  }
 }
-.projects .row div:hover{
-  transform: scale(1.05);
-  background-color: rgb(56, 12, 166);
+
+.card{
+  padding-top: 100px;
+  transform-style: preserve-3d; 
+  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?uato=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+.card:hover{
+  background-position: 50% 50%;
+  transform: rotate3d(0.8, .8, 0, 30deg);
+}
+.card-body {
+  background: rgba(0, 3, 14, 0.7) ; 
+  border-radius: 20px;
+  margin: 10%;
+  transform-style: preserve-3d; 
+  .btn{
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 5px rgb(92, 151, 233);
+    transform: translate3d(0px,0px,30px);
+  }
+  
 }
 
 /*contacts*/

@@ -1,4 +1,4 @@
-import React from 'react'
+    import React from 'react'
 import skills from './data/skills.json'
 const Skills = () => {
   return (
