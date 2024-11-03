@@ -1,9 +1,10 @@
 :root{
   --box-shadow: 5px 5px 10px 10px pink; 
   --bg-color: rgb(73, 85, 179);
+  --transition: all 0.5s ease-in-out;
 }
 html body{
-  background-color:rgb(8, 47, 115) ;
+  background-color:rgb(42, 106, 215) ;
   padding: 0;
   margin: 0;
   color: white;
@@ -96,20 +97,20 @@ html body{
 @keyframes imageanimation {
   0%{
     border-color:rgb(64, 107, 246);
-    box-shadow: 10px 10px 100px 30px rgb(64, 107, 246);
+    box-shadow: 1vw 1vw 10vw 2vw rgb(64, 107, 246);
   }
   50%{
     border-color: rgb(245, 255, 47);
     transform: translate(0,10px);
-    box-shadow: 10px 10px 100px 10px rgb(245, 255, 47);
+    box-shadow: 1vw 1vw 10vw 2vw rgb(245, 255, 47);
   }
   75%{
     border-color:rgb(245, 91, 222);
-    box-shadow: 10px 10px 100px 30px rgb(236, 78, 188);
+    box-shadow: 1vw 1vw 10vw 2vw rgb(236, 78, 188);
 
   }100%{
     border-color: rgb(44, 217, 252);
-    box-shadow: 10px 10px 100px 30px rgb(51, 225, 252);
+    box-shadow: 1vw 1vw 10vw 2vw rgb(51, 225, 252);
   }  
 }
 
@@ -165,22 +166,21 @@ html body{
 .parent{
   perspective: 1000px;
   .img{
-    transform-style: preserve-3d; 
+    transform-style: preserve-3d; /*without this card-img-top translated3d will not work*/
   }
   .card-img-top{
-    box-shadow: 0px 2px 60px rgba(8, 57, 126, 0.5), 0px 4px 80px rgba(21, 93, 193, 0.5);
-     opacity: .8;   
-     /* box-shadow: <horizontal-offset> <vertical-offset> <blur-radius> <color>*/
+    opacity: .8;   
+     box-shadow: 1px 5px 40px 20px rgb(5, 8, 93);
      transform: translate3d(0px,0px,50px);
   }
 }
 
 .card{
-  padding-top: 100px;
+  padding-top: 35px;
   transform-style: preserve-3d; 
   background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?uato=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   width: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: var(--transition);
   border-radius: 10px;
 }
 .card:hover{
@@ -191,10 +191,20 @@ html body{
   background: rgba(0, 3, 14, 0.7) ; 
   border-radius: 20px;
   margin: 10%;
-  transform-style: preserve-3d; 
+  transform-style: preserve-3d; /*without this btn translated3d will not work*/
+  .card-title{
+    transition: var(--transition);
+  }
+  .card-title:hover{
+    font-weight:700;
+    transform: translate3d(0px,0px,20px);
+  }
   .btn{
     border-radius: 10px;
-    box-shadow: 1px 5px 10px 5px rgb(92, 151, 233);
+    box-shadow: 1px 5px 10px 3px rgb(92, 151, 233);
+    transition: var(--transition);
+  }
+  .btn:hover{
     transform: translate3d(0px,0px,30px);
   }
   
