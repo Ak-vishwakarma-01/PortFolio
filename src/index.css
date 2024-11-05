@@ -14,8 +14,9 @@ html body{
 
 .nav_bar {
   display: flex;
+  background-color: rgb(58, 61, 238);
   align-items: center;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
   position: fixed;
   top: 0; /* Add this */
@@ -49,6 +50,7 @@ html body{
 
 /*home Sections*/
 .home{
+  margin-top: 10vh;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -57,8 +59,8 @@ html body{
 
 .home .left{
   background-color: var(--bg-color);
-  width: 40vw;
-  height: 25vh;
+  width: 35vw;
+  height: 20vh;
   text-align: center;
   border: 1px solid white;
   box-shadow: var(--box-shadow);
@@ -114,41 +116,65 @@ html body{
   }  
 }
 
-/*skills */
-.skills{
-  width: 800px;
+/*skills 3d animation*/
+.banner{
+  width: 100%;
+  height: 100vh;
+  padding-top: 10vh;
   text-align: center;
-}
-.skills h1{
-  margin-right:16vw;
-}
-
-.skills .items{
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 600px;
-}
-.skills .items .item{
-  width: calc(33.33%);
-  background-color: black;
-  margin: 20px;
-  padding: 10px;
-  text-align: center;
-  border: 2px solid rgb(245, 91, 222);
-  box-shadow: 5px 5px 5px 0px rgb(236, 126, 241);
-  border-radius: 20px;
-}
-.skills .items .item img{
-  width: 70px;
-  height: 70px;
-}
-
-.skills .items .item:hover {
-  animation: bounce 0.5s;
-  background-color: rgb(57, 9, 171);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
   
+}
+.banner .slider{
+  position: absolute;
+  margin-top: 20vh;
+  .item:hover {
+    /* animation: bounce 0.5s; */
+    background-color: rgb(57, 9, 171);
+    
+  }
+  transform-style: preserve-3d;
+  transform: perspective(80vw); /*This is the depth of the z direciton*/
+  animation: autoRun 20s linear infinite;
+  
+}
+@keyframes autoRun{
+  from{
+    transform: perspective(80vw) rotatex(-15deg) rotateY(0deg);
+  }to{
+    transform: perspective(80vw) rotatex(-15deg)  rotateY(360deg);  
+  }
+}
+.banner .slider .item{
+  width: 10vw;  
+  height: 10vw;
+    background-color: rgb(51, 171, 227);
+    margin: .5vw;
+    padding: .5vw;
+    border: 2px solid rgb(245, 91, 222);
+    box-shadow: 5px 5px 5px 0px rgb(236, 126, 241);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    img{
+      border-radius: 20px;
+      width: 10vw;
+      height: 10vw;
+      object-fit: cover;
+  }
+  h3{
+    color: violet;
+  }
+  position: absolute;
+  inset: 0 0 0 0 ;
+  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+  translateZ(550px);
+
 }
 
 @keyframes bounce {
@@ -162,6 +188,7 @@ html body{
     transform: translateY(-5px);
   }
 }
+
 /* projects  3d animation*/
 .parent{
   perspective: 1000px;
@@ -180,7 +207,7 @@ html body{
   transform-style: preserve-3d; 
   background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?uato=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   width: 100%;
-  transition: var(--transition);
+  transition: all 0.5s ease-in-out;
   border-radius: 10px;
 }
 .card:hover{
@@ -193,7 +220,7 @@ html body{
   margin: 10%;
   transform-style: preserve-3d; /*without this btn translated3d will not work*/
   .card-title{
-    transition: var(--transition);
+    transition: all 0.1s ease-in-out;
   }
   .card-title:hover{
     font-weight:700;
@@ -202,7 +229,7 @@ html body{
   .btn{
     border-radius: 10px;
     box-shadow: 1px 5px 10px 3px rgb(92, 151, 233);
-    transition: var(--transition);
+    transition: all 0.1s ease-in-out;
   }
   .btn:hover{
     transform: translate3d(0px,0px,30px);
@@ -332,34 +359,45 @@ html body{
     }  
   }
 
-  /*skills */
-.skills{
-  width: 300px;
+/*projects */
+.projects{ 
+  width: 70vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .parent{
+    width: 65vw;
+  }
 }
 
-.skills .items{
-  width: 230px;
+/*skills 3d animation*/
+
+.banner .slider{
+
+  margin-top: 20vh;
 }
-.skills .items .item{
-  width: calc(33.33%);
-  background-color: black;
-  margin: 10px;
-  padding: 5px;
-  border: 2px solid rgb(245, 91, 222);
-  box-shadow: 3px 3px 3px 0px rgb(236, 126, 241);
-  border-radius: 10px;
+@keyframes autoRun{
+  from{
+    transform: perspective(100vw) rotatex(-15deg) rotateY(0deg);
+  }to{
+    transform: perspective(100vw) rotatex(-15deg)  rotateY(360deg);  
+  }
 }
-.skills .items .item h3{
-  font-size: 0.9rem;
+.banner .slider .item{
+  width: 15vw;  
+  height: 15vw;
+    img{
+      width: 15vw;
+      height: 15vw;
+  }
+  position: absolute;
+  inset: 0 0 0 0 ;
+  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+  translateZ(550px);
+
 }
-.skills .items .item img{
-  width: 50px;
-  height: 50px;
-}
-/*projects */
-.projects{
-  width: 250px;
-}
+
 
 /*contacts*/
 .contacts{
@@ -403,3 +441,33 @@ html body{
 
 }
 
+
+@media (max-width:1000px) {
+  
+/*skills 3d animation*/
+
+.banner .slider{
+  margin-top: 20vh;
+  transform: perspective(150vw);
+}
+@keyframes autoRun{
+  from{
+    transform: perspective(150vw) rotatex(-15deg) rotateY(0deg);
+  }to{
+    transform: perspective(150vw) rotatex(-15deg)  rotateY(360deg);  
+  }
+}
+.banner .slider .item{
+  width: 15vw;  
+  height: 15vw;
+    img{
+      width: 15vw;
+      height: 15vw;
+  }
+  position: absolute;
+  inset: 0 0 0 0 ;
+  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+  translateZ(550px);
+
+}
+}

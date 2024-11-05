@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
     {/* <Img3D/>   */}
-    <div className="container home" id="home">
+    <div className="home" id="home">
       <div className="left">
           <h1>Ankit Kumar <br/> Vishwakarma</h1>
           <a href={Resume1} download={"Resume.pdf"} className="btn btn-outline-warning">Download Resume</a>

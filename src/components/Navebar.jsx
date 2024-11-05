@@ -8,8 +8,8 @@ const Navebar = () => {
   }
   return (
     <>
-      <div className={`container nav_bar ${mobile}`}>
-        <div className={`left le${mobile}`} style={{fontWeight:"bold", fontSize:"1.6rem"}}>Portfolio</div>
+      <div className={`nav_bar ${mobile}`}>
+        <div className={`left le${mobile}`} style={{fontWeight:"bold", fontSize:"1.6rem", marginLeft:"10px"}}>Portfolio</div>
         <div className={`right ${mobile}`}>
           <a onClick={changclass} href="#home" className="nav_items">Home</a>
           {/* <a onClick={changclass} href="#experience" className="nav_items">Experience</a> */}
