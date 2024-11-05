@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home" id="home">
       <div className="left">
           <h2>Ankit Kumar <br/> Vishwakarma</h2>
-          <a href={Resume1} download={"Resume.pdf"} className="btn btn-outline-warning">Download Resume</a>
+          <a href={Resume1} download={"Resume.pdf"} className="btn btn-outline-warning" style={{color:"black", backgroundColor:"skyblue"}}>Download Resume</a>
       </div>
       <div className="right">
         <div className="img">
