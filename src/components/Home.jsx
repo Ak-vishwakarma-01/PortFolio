@@ -1,7 +1,6 @@
 import React from 'react'
 import Resume1 from '../pdf/Resume1.pdf'
 import hero from './data/hero.json' 
-import img from './3dComponents/Img3D'
 import Img3D from './3dComponents/Img3D'
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
     {/* <Img3D/>   */}
     <div className="home" id="home">
       <div className="left">
-          <h1>Ankit Kumar <br/> Vishwakarma</h1>
+          <h2>Ankit Kumar <br/> Vishwakarma</h2>
           <a href={Resume1} download={"Resume.pdf"} className="btn btn-outline-warning">Download Resume</a>
       </div>
       <div className="right">

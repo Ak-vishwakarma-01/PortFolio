@@ -50,8 +50,8 @@ html body{
 
 /*home Sections*/
 .home{
-  margin-top: 10vh;
-  height: 80vh;
+  padding-top: 10vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,8 +59,8 @@ html body{
 
 .home .left{
   background-color: var(--bg-color);
-  width: 35vw;
-  height: 20vh;
+  width: 30vw;
+  height: 30vh;
   text-align: center;
   border: 1px solid white;
   box-shadow: var(--box-shadow);
@@ -69,12 +69,28 @@ html body{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-.home .left:hover{
-  background-color: rgb(58, 4, 108);
   animation: imageanimation 2s;
-} 
+  animation-iteration-count:infinite;
+
+  transform-style: preserve-3d; 
+  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?uato=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  transition: all 0.5s ease-in-out;
+  animation: none;
+  
+}
+.home .left:hover{
+    background-position: 50% 50%;
+    transform: rotate3d(0.8, .8, 0, 30deg);
+    h2{
+      transform: translate3d(0px, 0px, 30px);
+    }
+    a{
+      transform: translate3d(0px, 0px, 30px);
+    }
+  }
+  .home .left a:hover{
+    box-shadow: 1px 1px 20px 5px rgb(156, 222, 68);
+  }
 
 
 .home .right .img{
@@ -119,7 +135,7 @@ html body{
 /*skills 3d animation*/
 .banner{
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   padding-top: 10vh;
   text-align: center;
   overflow: hidden;
@@ -138,20 +154,18 @@ html body{
     
   }
   transform-style: preserve-3d;
-  transform: perspective(80vw); /*This is the depth of the z direciton*/
   animation: autoRun 20s linear infinite;
-  
 }
 @keyframes autoRun{
   from{
-    transform: perspective(80vw) rotatex(-15deg) rotateY(0deg);
+    transform: perspective(80vw) rotatex(-20deg) rotateY(0deg);
   }to{
-    transform: perspective(80vw) rotatex(-15deg)  rotateY(360deg);  
+    transform: perspective(80vw) rotatex(-20deg)  rotateY(360deg);  
   }
 }
 .banner .slider .item{
-  width: 10vw;  
-  height: 10vw;
+  width: 8vw;  
+  height: 8vw;
     background-color: rgb(51, 171, 227);
     margin: .5vw;
     padding: .5vw;
@@ -163,8 +177,8 @@ html body{
     gap: 4vh;
     img{
       border-radius: 20px;
-      width: 10vw;
-      height: 10vw;
+      width: 8vw;
+      height: 8vw;
       object-fit: cover;
   }
   h3{
@@ -172,9 +186,9 @@ html body{
   }
   position: absolute;
   inset: 0 0 0 0 ;
-  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-  translateZ(550px);
-
+  transform: 
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) 
+      translateZ(30vw);
 }
 
 @keyframes bounce {
@@ -318,12 +332,16 @@ html body{
   .home{
     height: 55vh;
     flex-direction:column-reverse;
+    gap: 20px;
   }
   .home h1{
     font-size: 1.5rem;
   }
   .home .left{
-    width: 80%;
+    width: 50%;
+    h2{
+      font-size: larger;
+    }
     margin-bottom: 2vh;
     box-shadow: 3px 3px 10px 2px pink; 
   }
@@ -371,32 +389,15 @@ html body{
   }
 }
 
-/*skills 3d animation*/
-
-.banner .slider{
-
-  margin-top: 20vh;
-}
+/* skills 3d animation */
 @keyframes autoRun{
   from{
-    transform: perspective(100vw) rotatex(-15deg) rotateY(0deg);
+    transform: perspective(80vw) rotatex(-30deg) rotateY(0deg);
   }to{
-    transform: perspective(100vw) rotatex(-15deg)  rotateY(360deg);  
+    transform: perspective(80vw) rotatex(-40deg)  rotateY(360deg);  
   }
 }
-.banner .slider .item{
-  width: 15vw;  
-  height: 15vw;
-    img{
-      width: 15vw;
-      height: 15vw;
-  }
-  position: absolute;
-  inset: 0 0 0 0 ;
-  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-  translateZ(550px);
 
-}
 
 
 /*contacts*/
@@ -441,33 +442,12 @@ html body{
 
 }
 
-
 @media (max-width:1000px) {
-  
-/*skills 3d animation*/
-
-.banner .slider{
-  margin-top: 20vh;
-  transform: perspective(150vw);
-}
-@keyframes autoRun{
-  from{
-    transform: perspective(150vw) rotatex(-15deg) rotateY(0deg);
-  }to{
-    transform: perspective(150vw) rotatex(-15deg)  rotateY(360deg);  
-  }
-}
-.banner .slider .item{
-  width: 15vw;  
-  height: 15vw;
-    img{
-      width: 15vw;
-      height: 15vw;
-  }
-  position: absolute;
-  inset: 0 0 0 0 ;
-  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-  translateZ(550px);
-
-}
+  @keyframes autoRun{
+    from{
+      transform: perspective(80vw) rotatex(-30deg) rotateY(0deg);
+    }to{
+      transform: perspective(80vw) rotatex(-30deg)  rotateY(360deg);  
+    }
+  } 
 }
