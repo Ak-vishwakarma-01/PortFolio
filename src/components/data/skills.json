@@ -35,5 +35,9 @@
   {"id":9,
     "title":"Java Swing",
     "imageSrc":"skills/swing.png"
+  },
+  {"id":10,
+    "title":"Spring Boot",
+    "imageSrc":"skills/springboot.png"
   }
 ]
