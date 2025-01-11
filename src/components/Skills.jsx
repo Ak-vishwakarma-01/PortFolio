@@ -11,8 +11,8 @@ const Skills = () => {
                 <>  
                     <div className="item" key={data.id} style={{ "--position": data.id }}>
                         <img src={`/assets/${data.imageSrc}`} alt="" />
+                    <h3 style={{fontSize:"2vw"}}>{data.title}</h3>
                     </div>
-                    <h3 style={{fontSize:"2.5vw"}}>{data.title}</h3>
                 </>
             )
         })}

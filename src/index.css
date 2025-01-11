@@ -134,7 +134,7 @@ html body{
 /*skills 3d animation*/
 .banner{
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   padding-top: 10vh;
   text-align: center;
   overflow: hidden;
@@ -152,12 +152,17 @@ html body{
     background-color: rgb(57, 9, 171);
     
   }
+  
   transform-style: preserve-3d;
   animation: autoRun 20s linear infinite;
+  .h3{
+    position: fixed;
+    
+  }
 }
 @keyframes autoRun{
   from{
-    transform: perspective(80vw) rotatex(-20deg) rotateY(0deg);
+    transform: perspective(80vw) rotatex(-15deg) rotateY(0deg);
   }to{
     transform: perspective(80vw) rotatex(-20deg)  rotateY(360deg);  
   }
@@ -385,15 +390,6 @@ html body{
   align-items: center;
   .parent{
     width: 65vw;
-  }
-}
-
-/* skills 3d animation */
-@keyframes autoRun{
-  from{
-    transform: perspective(80vw) rotatex(-30deg) rotateY(0deg);
-  }to{
-    transform: perspective(80vw) rotatex(-40deg)  rotateY(360deg);  
   }
 }
 

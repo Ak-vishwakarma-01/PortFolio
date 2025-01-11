@@ -1,5 +1,5 @@
 import React from 'react'
-import Resume1 from '../pdf/Resume1.pdf'
+import Resume1 from '../pdf/Resumed1.pdf'
 import hero from './data/hero.json' 
 import Img3D from './3dComponents/Img3D'
 const Home = () => {
