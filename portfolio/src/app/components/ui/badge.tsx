@@ -1,17 +1,29 @@
 import React from "react"
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode
   className?: string
+  variant?: "default" | "secondary" | "outline"
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, className = "", ...props }) => (
-  <button
-    className={`inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 bg-pink-600 text-white hover:bg-pink-700 ${className}`}
-    {...props}
-  >
-    {children}
-  </button>
-)
+export const Badge: React.FC<BadgeProps> = ({
+  children,
+  className = "",
+  variant = "default",
+  ...props
+}) => {
+  let base =
+    "inline-block px-3 py-1 rounded-full text-xs font-semibold transition-colors";
+  let variants = {
+    default: "bg-pink-500 text-white",
+    secondary: "bg-purple-600/50 text-white",
+    outline: "border border-pink-400/50 text-pink-300 bg-transparent",
+  }
+  return (
+    <span className={`${base} ${variants[variant]} ${className}`} {...props}>
+      {children}
+    </span>
+  )
+}
 
-export default Button
+export default Badge

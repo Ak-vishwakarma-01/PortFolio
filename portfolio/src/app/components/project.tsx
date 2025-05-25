@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Button from "./ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Button from "./ui/button";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
@@ -35,7 +35,8 @@ const projects = [
     title: "Notes Keeper",
     imageSrc: "Projects/Keeper.png",
     description: "Keeper App made with complete reactjs",
-    source: "https://github.com/Ak-vishwakarma-01/Learning-Full-stack/tree/main/17%20React/288-keeperapp",
+    source:
+      "https://github.com/Ak-vishwakarma-01/Learning-Full-stack/tree/main/17%20React/288-keeperapp",
     demo: "https://keeper-app-ak-vishwakarma.vercel.app/",
     technologies: ["React.js"],
   },
@@ -48,13 +49,15 @@ const projects = [
     demo: "",
     technologies: ["Java", "Swing"],
   },
-]
+];
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">Featured Projects</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-12">
+          Featured Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
@@ -78,7 +81,9 @@ export default function Projects() {
                   {project.title}
                 </CardTitle>
 
-                <p className="text-blue-200 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-blue-200 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 {project.technologies && (
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -95,26 +100,30 @@ export default function Projects() {
 
                 <div className="flex gap-3">
                   {project.demo && (
-                    <Button
-                      className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
-                      asChild
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
                     >
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   )}
 
-                  <Button
-                    className="flex-1 border-blue-400/50 text-blue-300 hover:bg-blue-400/10"
-                    asChild
+                  <a
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    <a href={project.source} target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full border-blue-400/50 text-blue-300 hover:bg-blue-400/10">
                       <Github className="mr-2 h-4 w-4" />
                       Code
-                    </a>
-                  </Button>
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -122,5 +131,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
-import  Button  from "./ui/button"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Button from "./ui/button";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { href: "#home", label: "Home" },
@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
-  ]
+  ];
 
   return (
     <nav className="fixed top-0 w-full bg-blue-800/90 backdrop-blur-md border-b border-blue-700/50 z-50">
@@ -37,9 +37,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:bg-blue-700"
+            className="md:hidden text-white hover:bg-blue-700 p-2 rounded-full"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -63,5 +61,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }
